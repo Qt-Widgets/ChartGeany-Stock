@@ -1,0 +1,8 @@
+[Desktop Entry]
+GenericName=Chart Geany
+Name=ChartGeany
+Exec=chartgeany
+Icon=${SNAP}/meta/gui/chartgeany.png
+Type=Application
+Terminal=false
+Categories=Office;

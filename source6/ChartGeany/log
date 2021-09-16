@@ -1,0 +1,452 @@
+QMainWindowLayout::addItem: Please use the public QMainWindow API instead
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 29737, resource id: 13671283, major code: 40 (TranslateCoords), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 47670, resource id: 13761908, major code: 40 (TranslateCoords), minor code: 0
+qt.qpa.xcb: QXcbConnection: XCB error: 3 (BadWindow), sequence: 47874, resource id: 13762894, major code: 40 (TranslateCoords), minor code: 0
+
+=================================================================
+==33485==ERROR: LeakSanitizer: detected memory leaks
+
+Direct leak of 16384 byte(s) in 1 object(s) allocated from:
+    #0 0x7f19838926a4 in malloc (/lib64/liblsan.so.0+0x106a4)
+    #1 0x7f1975105bb8 in g_malloc (/lib64/libglib-2.0.so.0+0x5bbb8)
+
+Direct leak of 4608 byte(s) in 7 object(s) allocated from:
+    #0 0x7f19838929d9 in realloc (/lib64/liblsan.so.0+0x109d9)
+    #1 0x7f1975ac9f98  (/lib64/libfontconfig.so.1+0x1ef98)
+
+Direct leak of 896 byte(s) in 16 object(s) allocated from:
+    #0 0x7f1983892425  (/lib64/liblsan.so.0+0x10425)
+    #1 0x7f196b564413  (/lib64/libnvidia-glcore.so.465.27+0xdaa413)
+
+Direct leak of 256 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197e5cb210  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2388210)
+    #2 0x7f197e5cb450  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2388450)
+    #3 0x7f198101a88d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dd788d)
+    #4 0x7f198101a4e3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dd74e3)
+    #5 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #6 0x7f197eb73944  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2930944)
+    #7 0x7f197eb73da3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2930da3)
+    #8 0x7f197cbc3e95  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x980e95)
+    #9 0x7f197a5cbc7e in QObject::event(QEvent*) (/lib64/libQt5Core.so.5+0x2a9c7e)
+    #10 0x7f197b723ec2 in QApplicationPrivate::notify_helper(QObject*, QEvent*) (/lib64/libQt5Widgets.so.5+0x1adec2)
+
+Direct leak of 88 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197b742141 in QLayoutPrivate::createWidgetItem(QLayout const*, QWidget*) (/lib64/libQt5Widgets.so.5+0x1cc141)
+
+Direct leak of 80 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197fb1110a  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x38ce10a)
+    #2 0x7f197fb1182e  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x38ce82e)
+    #3 0x7f1980e5d77b  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4c1a77b)
+    #4 0x7f1980e5d9ee  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4c1a9ee)
+    #5 0x7f1980e5dba0  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4c1aba0)
+    #6 0x7f197eb8ca94  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2949a94)
+    #7 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #8 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Direct leak of 72 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f1981396b47  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x5153b47)
+    #2 0x7f1981001d47  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbed47)
+    #3 0x7f198100231a  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbf31a)
+    #4 0x7f198125b9b5  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x50189b5)
+    #5 0x7f1981000362  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbd362)
+    #6 0x7f1981003080  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dc0080)
+    #7 0x7f197cc58af8  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa15af8)
+    #8 0x7f197cc59ca3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa16ca3)
+    #9 0x7f198384a832  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineWidgets.so.5+0x2b832)
+
+Indirect leak of 81628800 byte(s) in 193 object(s) allocated from:
+    #0 0x7f19838926a4 in malloc (/lib64/liblsan.so.0+0x106a4)
+    #1 0x7f197b10c207 in QImageData::create(QSize const&, QImage::Format) (/lib64/libQt5Gui.so.5+0x1aa207)
+
+Indirect leak of 80288 byte(s) in 193 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ba2bc61 in QGraphicsPixmapItem::QGraphicsPixmapItem(QPixmap const&, QGraphicsItem*) (/lib64/libQt5Widgets.so.5+0x4b5c61)
+
+Indirect leak of 27792 byte(s) in 193 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197b10c1bc in QImageData::create(QSize const&, QImage::Format) (/lib64/libQt5Gui.so.5+0x1aa1bc)
+
+Indirect leak of 26112 byte(s) in 192 object(s) allocated from:
+    #0 0x7f19838930b4 in operator new[](unsigned long) (/lib64/liblsan.so.0+0x110b4)
+    #1 0x7f197a441b27 in QHashData::rehash(int) (/lib64/libQt5Core.so.5+0x11fb27)
+
+Indirect leak of 15440 byte(s) in 193 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197b136027 in QRasterPlatformPixmap::createCompatiblePlatformPixmap() const (/lib64/libQt5Gui.so.5+0x1d4027)
+
+Indirect leak of 11392 byte(s) in 356 object(s) allocated from:
+    #0 0x7f19838926a4 in malloc (/lib64/liblsan.so.0+0x106a4)
+    #1 0x7f1975ab6f1f  (/lib64/libfontconfig.so.1+0xbf1f)
+
+Indirect leak of 9384 byte(s) in 23 object(s) allocated from:
+    #0 0x7f19838926a4 in malloc (/lib64/liblsan.so.0+0x106a4)
+    #1 0x7f197a413a90 in QArrayData::allocate(unsigned long, unsigned long, unsigned long, QFlags<QArrayData::AllocationOption>) (/lib64/libQt5Core.so.5+0xf1a90)
+
+Indirect leak of 9216 byte(s) in 192 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197a44193b in QHashData::detach_helper(void (*)(QHashData::Node*, void*), void (*)(QHashData::Node*), int, int) (/lib64/libQt5Core.so.5+0x11f93b)
+
+Indirect leak of 7680 byte(s) in 192 object(s) allocated from:
+    #0 0x7f19838926a4 in malloc (/lib64/liblsan.so.0+0x106a4)
+    #1 0x7f197a441727 in QHashData::allocateNode(int) (/lib64/libQt5Core.so.5+0x11f727)
+
+Indirect leak of 5990 byte(s) in 415 object(s) allocated from:
+    #0 0x7f19838926a4 in malloc (/lib64/liblsan.so.0+0x106a4)
+    #1 0x7f1979df378e in __strdup (/lib64/libc.so.6+0x9078e)
+
+Indirect leak of 3744 byte(s) in 117 object(s) allocated from:
+    #0 0x7f1983892425  (/lib64/liblsan.so.0+0x10425)
+    #1 0x7f1975acc7ca  (/lib64/libfontconfig.so.1+0x217ca)
+
+Indirect leak of 3088 byte(s) in 193 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ba4d0c8 in QGraphicsScene::addPixmap(QPixmap const&) (/lib64/libQt5Widgets.so.5+0x4d70c8)
+
+Indirect leak of 2784 byte(s) in 87 object(s) allocated from:
+    #0 0x7f1983892425  (/lib64/liblsan.so.0+0x10425)
+    #1 0x7f1975ac9b57  (/lib64/libfontconfig.so.1+0x1eb57)
+
+Indirect leak of 2392 byte(s) in 23 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197b2f5918 in QPainterPath::ensureData_helper() (/lib64/libQt5Gui.so.5+0x393918)
+
+Indirect leak of 1536 byte(s) in 16 object(s) allocated from:
+    #0 0x7f1983892425  (/lib64/liblsan.so.0+0x10425)
+    #1 0x7f196b564413  (/lib64/libnvidia-glcore.so.465.27+0xdaa413)
+
+Indirect leak of 728 byte(s) in 35 object(s) allocated from:
+    #0 0x7f19838926a4 in malloc (/lib64/liblsan.so.0+0x106a4)
+    #1 0x7f196b563fac  (/lib64/libnvidia-glcore.so.465.27+0xda9fac)
+
+Indirect leak of 512 byte(s) in 8 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ec86763  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a43763)
+    #2 0x7f197ec86fe9  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a43fe9)
+    #3 0x7f197ec87333  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a44333)
+    #4 0x7f197ec876a6  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a446a6)
+    #5 0x7f197ec7d3c0  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a3c0)
+    #6 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #7 0x7f197eb7e7a1  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b7a1)
+    #8 0x7f197eb7ed1f  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bd1f)
+    #9 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #10 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #11 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #12 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #13 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #14 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 440 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ec7d74c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a74c)
+    #2 0x7f197ec27a86  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x29e4a86)
+    #3 0x7f1980fff7c0  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbc7c0)
+    #4 0x7f198100302a  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dc002a)
+    #5 0x7f197cc58af8  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa15af8)
+    #6 0x7f197cc59ca3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa16ca3)
+    #7 0x7f198384a832  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineWidgets.so.5+0x2b832)
+
+Indirect leak of 352 byte(s) in 11 object(s) allocated from:
+    #0 0x7f1983892425  (/lib64/liblsan.so.0+0x10425)
+    #1 0x7f1975ad298e in FcFontRenderPrepare (/lib64/libfontconfig.so.1+0x2798e)
+
+Indirect leak of 328 byte(s) in 1 object(s) allocated from:
+    #0 0x7f19838926a4 in malloc (/lib64/liblsan.so.0+0x106a4)
+    #1 0x7f195c9ec044  (/lib64/libudev.so.1+0x1d044)
+    #2 0xa5698e80af0ffbff  (<unknown module>)
+
+Indirect leak of 288 byte(s) in 9 object(s) allocated from:
+    #0 0x7f1983892425  (/lib64/liblsan.so.0+0x10425)
+    #1 0x7f1975ad29f9 in FcFontRenderPrepare (/lib64/libfontconfig.so.1+0x279f9)
+
+Indirect leak of 192 byte(s) in 4 object(s) allocated from:
+    #0 0x7f19838926a4 in malloc (/lib64/liblsan.so.0+0x106a4)
+    #1 0x7f1975ac0ed0 in FcLangSetCopy (/lib64/libfontconfig.so.1+0x15ed0)
+
+Indirect leak of 160 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197d41ebe9  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11dbbe9)
+    #2 0x7f197d41eede  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11dbede)
+    #3 0x7f197d41d019  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11da019)
+    #4 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #5 0x7f197eb7e771  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b771)
+    #6 0x7f197eb7ec67  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bc67)
+    #7 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #8 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #9 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #10 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #11 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #12 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 104 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ec870ef  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a440ef)
+    #2 0x7f197ec87333  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a44333)
+    #3 0x7f197ec8770e  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a4470e)
+    #4 0x7f197ec7d3c0  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a3c0)
+    #5 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #6 0x7f197eb7e7a1  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b7a1)
+    #7 0x7f197eb7ed1f  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bd1f)
+    #8 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #9 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #10 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #11 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #12 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #13 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 64 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197d41eeb9  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11dbeb9)
+    #2 0x7f197d41d019  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11da019)
+    #3 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #4 0x7f197eb7e771  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b771)
+    #5 0x7f197eb7ec67  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bc67)
+    #6 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #7 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #8 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #9 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #10 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #11 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 64 byte(s) in 2 object(s) allocated from:
+    #0 0x7f1983892425  (/lib64/liblsan.so.0+0x10425)
+    #1 0x7f1975ad8e9c  (/lib64/libfontconfig.so.1+0x2de9c)
+
+Indirect leak of 56 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892425  (/lib64/liblsan.so.0+0x10425)
+    #1 0x7f195c9e4ff2  (/lib64/libudev.so.1+0x15ff2)
+
+Indirect leak of 56 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ec7d60d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a60d)
+    #2 0x7f197ec7d75a  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a75a)
+    #3 0x7f197ec27a86  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x29e4a86)
+    #4 0x7f1980fff7c0  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbc7c0)
+    #5 0x7f198100302a  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dc002a)
+    #6 0x7f197cc58af8  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa15af8)
+    #7 0x7f197cc59ca3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa16ca3)
+    #8 0x7f198384a832  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineWidgets.so.5+0x2b832)
+
+Indirect leak of 56 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ec7d5cf  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a5cf)
+    #2 0x7f197ec7d75a  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a75a)
+    #3 0x7f197ec27a86  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x29e4a86)
+    #4 0x7f1980fff7c0  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbc7c0)
+    #5 0x7f198100302a  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dc002a)
+    #6 0x7f197cc58af8  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa15af8)
+    #7 0x7f197cc59ca3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa16ca3)
+    #8 0x7f198384a832  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineWidgets.so.5+0x2b832)
+
+Indirect leak of 56 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ec878af  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a448af)
+    #2 0x7f197ec7d3c0  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a3c0)
+    #3 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #4 0x7f197eb7e7a1  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b7a1)
+    #5 0x7f197eb7ed1f  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bd1f)
+    #6 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #7 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #8 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #9 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #10 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #11 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 56 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197d41ec43  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11dbc43)
+    #2 0x7f197d41eede  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11dbede)
+    #3 0x7f197d41d019  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11da019)
+    #4 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #5 0x7f197eb7e771  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b771)
+    #6 0x7f197eb7ec67  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bc67)
+    #7 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #8 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #9 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #10 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #11 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #12 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 48 byte(s) in 3 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ec86e86  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a43e86)
+    #2 0x7f197ec87333  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a44333)
+    #3 0x7f197ec8770e  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a4470e)
+    #4 0x7f197ec7d3c0  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a3c0)
+    #5 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #6 0x7f197eb7e7a1  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b7a1)
+    #7 0x7f197eb7ed1f  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bd1f)
+    #8 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #9 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #10 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #11 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #12 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #13 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 48 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f1981396b0d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x5153b0d)
+    #2 0x7f1981001d47  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbed47)
+    #3 0x7f198100231a  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbf31a)
+    #4 0x7f198125b9b5  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x50189b5)
+    #5 0x7f1981000362  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbd362)
+    #6 0x7f1981003080  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dc0080)
+    #7 0x7f197cc58af8  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa15af8)
+    #8 0x7f197cc59ca3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa16ca3)
+    #9 0x7f198384a832  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineWidgets.so.5+0x2b832)
+
+Indirect leak of 48 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ebb887d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x297587d)
+    #2 0x7f197d41ec86  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11dbc86)
+    #3 0x7f197d41eede  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11dbede)
+    #4 0x7f197d41d019  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11da019)
+    #5 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #6 0x7f197eb7e771  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b771)
+    #7 0x7f197eb7ec67  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bc67)
+    #8 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #9 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #10 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #11 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #12 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #13 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 48 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ebb887d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x297587d)
+    #2 0x7f197ec878fa  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a448fa)
+    #3 0x7f197ec7d3c0  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a3c0)
+    #4 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #5 0x7f197eb7e7a1  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b7a1)
+    #6 0x7f197eb7ed1f  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bd1f)
+    #7 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #8 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #9 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #10 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #11 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #12 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 40 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197ec7d5a8  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a5a8)
+    #2 0x7f197ec7d75a  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a75a)
+    #3 0x7f197ec27a86  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x29e4a86)
+    #4 0x7f1980fff7c0  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbc7c0)
+    #5 0x7f198100302a  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dc002a)
+    #6 0x7f197cc58af8  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa15af8)
+    #7 0x7f197cc59ca3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa16ca3)
+    #8 0x7f198384a832  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineWidgets.so.5+0x2b832)
+
+Indirect leak of 24 byte(s) in 1 object(s) allocated from:
+    #0 0x7f19838926a4 in malloc (/lib64/liblsan.so.0+0x106a4)
+    #1 0x7f195c9dbb69 in udev_monitor_new_from_netlink (/lib64/libudev.so.1+0xcb69)
+
+Indirect leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x7f19838926a4 in malloc (/lib64/liblsan.so.0+0x106a4)
+    #1 0x7f195c9d71ff in udev_new (/lib64/libudev.so.1+0x81ff)
+    #2 0x7f197d41d019  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11da019)
+    #3 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #4 0x7f197eb7e771  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b771)
+    #5 0x7f197eb7ec67  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bc67)
+    #6 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #7 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #8 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #9 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #10 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #11 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197fb0c93c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x38c993c)
+    #2 0x7f197fb0b3fe  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x38c83fe)
+    #3 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #4 0x7f197eb73944  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2930944)
+    #5 0x7f197eb73da3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2930da3)
+    #6 0x7f197ebd2090  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x298f090)
+    #7 0x7f197eb71207  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x292e207)
+    #8 0x7f197eb4c22b  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x290922b)
+    #9 0x7f1981005f93  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dc2f93)
+    #10 0x7f197eb8ca87  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2949a87)
+    #11 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #12 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 16 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197d41cba5  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11d9ba5)
+    #2 0x7f1981002470  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbf470)
+    #3 0x7f198125b9b5  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x50189b5)
+    #4 0x7f1981000362  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dbd362)
+    #5 0x7f1981003080  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dc0080)
+    #6 0x7f197cc58af8  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa15af8)
+    #7 0x7f197cc59ca3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0xa16ca3)
+    #8 0x7f198384a832  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineWidgets.so.5+0x2b832)
+
+Indirect leak of 8 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197eb29eac  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x28e6eac)
+    #2 0x7f197ebb878d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x297578d)
+    #3 0x7f197ebb8893  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2975893)
+    #4 0x7f197ec878fa  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a448fa)
+    #5 0x7f197ec7d3c0  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2a3a3c0)
+    #6 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #7 0x7f197eb7e7a1  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b7a1)
+    #8 0x7f197eb7ed1f  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bd1f)
+    #9 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #10 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #11 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #12 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #13 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #14 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 8 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197eb29eac  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x28e6eac)
+    #2 0x7f197ebb878d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x297578d)
+    #3 0x7f197ebb8893  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2975893)
+    #4 0x7f197d41ec86  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11dbc86)
+    #5 0x7f197d41eede  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11dbede)
+    #6 0x7f197d41d019  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x11da019)
+    #7 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #8 0x7f197eb7e771  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b771)
+    #9 0x7f197eb7ec67  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293bc67)
+    #10 0x7f197ebc6e2d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2983e2d)
+    #11 0x7f197eb7e385  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x293b385)
+    #12 0x7f197eb83c1c  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2940c1c)
+    #13 0x7f197eb84283  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2941283)
+    #14 0x7f197ebc9459  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2986459)
+    #15 0x7f197a2823f8 in start_thread (/lib64/libpthread.so.0+0x93f8)
+
+Indirect leak of 8 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197eb29eac  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x28e6eac)
+    #2 0x7f197e617da9  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x23d4da9)
+    #3 0x7f197e5cb221  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2388221)
+    #4 0x7f197e5cb450  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2388450)
+    #5 0x7f198101a88d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dd788d)
+    #6 0x7f198101a4e3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dd74e3)
+    #7 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #8 0x7f197eb73944  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2930944)
+    #9 0x7f197eb73da3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2930da3)
+    #10 0x7f197cbc3e95  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x980e95)
+    #11 0x7f197a5cbc7e in QObject::event(QEvent*) (/lib64/libQt5Core.so.5+0x2a9c7e)
+    #12 0x7f197b723ec2 in QApplicationPrivate::notify_helper(QObject*, QEvent*) (/lib64/libQt5Widgets.so.5+0x1adec2)
+
+Indirect leak of 8 byte(s) in 1 object(s) allocated from:
+    #0 0x7f1983892f94 in operator new(unsigned long) (/lib64/liblsan.so.0+0x10f94)
+    #1 0x7f197eb29eac  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x28e6eac)
+    #2 0x7f197e617e61  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x23d4e61)
+    #3 0x7f197e5cb221  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2388221)
+    #4 0x7f197e5cb450  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2388450)
+    #5 0x7f198101a88d  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dd788d)
+    #6 0x7f198101a4e3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x4dd74e3)
+    #7 0x7f197eb60473  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x291d473)
+    #8 0x7f197eb73944  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2930944)
+    #9 0x7f197eb73da3  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x2930da3)
+    #10 0x7f197cbc3e95  (/usr/lib64/qt5-qtwebengine-freeworld/libQt5WebEngineCore.so.5+0x980e95)
+    #11 0x7f197a5cbc7e in QObject::event(QEvent*) (/lib64/libQt5Core.so.5+0x2a9c7e)
+    #12 0x7f197b723ec2 in QApplicationPrivate::notify_helper(QObject*, QEvent*) (/lib64/libQt5Widgets.so.5+0x1adec2)
+
+SUMMARY: LeakSanitizer: 81861870 byte(s) leaked in 2700 allocation(s).

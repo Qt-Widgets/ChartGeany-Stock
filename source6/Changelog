@@ -1,0 +1,114 @@
+Version 6.2.8
+- Bug fixing and stability improvements 
+
+Version 6.2.7
+- Quantities in portfolio positions with two digits after the decimal point
+
+Version 6.2.6
+- Bugfix for a serious file descriptor leak causing segfault
+- CGScript: Bugfix in arrays causing segfault
+
+Version 6.2.5
+- Bug fixing and optimization 
+
+Version 6.2.4
+- Service release for Windows
+
+Version 6.2.3
+- Bug fixing and optimization
+- Source code cleanup
+
+Version 6.2.2
+- Tiny C Compiler is now the default CGScript compiler for Solaris 10
+- Bug fixing and optimization
+- Source code cleanup
+
+Version 6.2.1
+- Twelve Data as a data feed for portfolios
+- Major source code clean up and performance gains
+- Minor bugs fixed
+- CGScript: Bugfix in sanitizer
+
+Version 6.2.0
+- Accounts tab in options. API keys and accounts credentials will be placed 
+  there
+- Twelve Data added as a data feed for US stocks, and indices
+
+Version 6.1.9
+- Port to Solaris 10
+- No packages will be released 
+- In order to compile the source, Qt4 and GCC 5.5 are needed from OpenCSW
+- LD_LIBRARY_PATH and LD_RUN_PATH must be set to /opt/csw/lib
+
+Version 6.1.8
+- Mac OS X binaries are now build with Qt 5.14.2 
+- Mac OS X minimum supported version upgraded to 10.15 (Catalina)
+- Grid lines in Mac OS X changed to dot
+- Bugfix: wrong parameter dialog positioning in Mac OS X
+- Bugfix: misbehaviour of modal dialogs in Mac OS X
+
+Version 6.1.7
+- Percentage Price Oscillator added in CGScript examples
+- Pence to pound conversion for portfolio totals when feed is Yahoo and 
+  currency GBP
+- Bugfix: a race condition in code editor highlighter causing segfault
+
+Version 6.1.6
+- ChartGeany.pro changes to cease qt4 gcc warnings 
+- ChartGeany.pro changes to create symlink in /usr/bin
+- Pence to pound conversion for GBP portfolios based on Yahoo datafeed
+
+Version 6.1.5
+- Mac OS X binaries are now build with Qt 5.7.1 
+- Mac OS X minimum supported version upgraded to 10.11 (El Capitan)
+- Combobox for toolchain choice in develop options
+- cgtool introduced 
+- Due to changes in database schema IEX symbols cannot be updated so you have 
+  to delete them and download the data again
+- Tiny C compiler is now the default CGScript compiler for Windows and Linux
+  and embedded in ChartGeany 
+- Source code cleanup 
+- Native sqlite3 under linux platform droped due to poor performance and
+  self hosted 3.7.17 version is used
+- fix: vbars in subcharts now can keep their color
+- CGScript: New code editor 
+- CGScript: version upgrade to 1.4
+- CGScript: macro CGSCRIPT_VERSION introduced
+- CGScript: signal and sigaction unix functions became noops 
+- CGScript: new error CGSERR_SIGNAL introduced 
+- CGScript: String_t user defined functions, return NULL for non-static
+  locally declared strings
+- CGScript: Array_t user defined functions, return NULL for non-static
+  locally declared arrays
+- CGScript: Objecthandler_t user defined functions, return NULL for non-static
+  locally declared handlers
+- CGScript: memory leak sanitizer for objects, strings and arrays
+
+Version 6.1.0
+- IEX cloud support
+
+Version 6.0.4
+- Native libxls used under Fedora only
+
+Version 6.0.3
+- libjson removed. Niels Lohmann json is used instead 
+- Native sqlite3 used under linux platforms
+- Native libxls used under linux platforms
+
+Version 6.0.2
+- New improved Alpha Vantage symbol checking
+- Default chart type for portfolio symbols changed to raw
+- Charts now open the help screen when bad ticks 
+  from the data feed disrupt the chart creation, 
+  making it impossible. 
+
+Version 6.0.1
+- GPL notice added to every source file
+- Home button now leads to chart-geany.sourceforge.io
+- Email address changed to chartgeany@gmail.com
+- New version checks from sourceforge.io
+- New web page hosted in sourceforge.io
+
+Version 6.0.0
+- Initial release of source code under GPL v2
+

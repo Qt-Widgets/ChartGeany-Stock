@@ -1,0 +1,92 @@
+---
+name: chartgeany
+title: ChartGeany
+version: 6.2.2-1snap
+summary: Technical analysis software
+description: |
+ Technical analysis software for stocks and other
+ financial instruments. With 18 technical indicators,
+ portfolio manager for multiple portfolios and multiple currencies,
+ stock ticker, various drawing objects, easy download of quotes from
+ the net, periodical price updates and many more.
+icon: chartgeany.png
+license: GPL-2.0
+architectures:
+- build-on: amd64
+  run-on: amd64
+grade: stable
+confinement: strict
+base: core18
+
+apps:
+  chartgeany:
+    command: bin/desktop-launch $SNAP/opt/chartgeany/ChartGeany
+    environment:
+      "QTWEBENGINE_CHROMIUM_FLAGS": "--disable-dev-shm-usage --no-sandbox"
+    desktop: usr/share/applications/chartgeany.desktop
+    plugs: [x11, wayland, network, network-bind, home, desktop, desktop-legacy,
+            browser-support, opengl]
+
+parts:
+  chartgeany:
+    plugin: qmake
+    qt-version: qt5
+    source: chartgeany-6.2.0.tar
+    source-type: tar
+    after: [desktop-qt5]
+
+    build-packages:
+      - qt5-default
+      - qtbase5-dev-tools
+      - qt5-qmake
+      - libqt5network5
+      - zlib1g-dev
+      - build-essential
+      - ca-certificates
+      - qtmultimedia5-dev
+      - libqt5core5a
+      - libqt5gui5
+      - qttools5-dev-tools
+      - qtdeclarative5-dev
+      - qtwebengine5-dev
+      - libqt5svg5-dev
+      - libglu1-mesa
+
+    stage-packages:
+      - libqt5network5
+      - libqt5core5a
+      - libqt5gui5
+      - libqt5webengine5
+      - libqt5webenginewidgets5
+      - qt5dxcb-plugin
+
+  desktop-qt5:
+    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
+    source-depth: 1
+    source-subdir: qt
+    plugin: make
+    make-parameters: ["FLAVOR=qt5"]
+    build-packages:
+      - build-essential
+      - qtbase5-dev
+      - dpkg-dev
+    stage-packages:
+      - libxkbcommon0
+      - ttf-ubuntu-font-family
+      - dmz-cursor-theme
+      - light-themes
+      - adwaita-icon-theme
+      - gnome-themes-standard
+      - shared-mime-info
+      - libqt5gui5
+      - libgdk-pixbuf2.0-0
+      - libqt5svg5   # for loading icon themes which are svg
+      - try: [appmenu-qt5]   # not available on core18
+      - locales-all
+      - xdg-user-dirs
+      - fcitx-frontend-qt5
+      - libgtk2.0-0
+
+layout:
+  /usr/share/qt5:
+    bind: $SNAP/usr/share/qt5
